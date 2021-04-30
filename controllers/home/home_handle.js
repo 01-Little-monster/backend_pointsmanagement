@@ -19,4 +19,5 @@ const prize = (req, res) => {
     message: '奖品预告'
   })
 }
+
 module.exports = { index, activity, mission, prize }

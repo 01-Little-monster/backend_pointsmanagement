@@ -1,7 +1,12 @@
 const router = require('express').Router()
 
 // 导入路由处理函数
-const { index, activity, mission, prize } = require('../controllers/home/home')
+const {
+  index,
+  activity,
+  mission,
+  prize
+} = require('../controllers/home/home_handle')
 
 router
   .get('/index', index)
