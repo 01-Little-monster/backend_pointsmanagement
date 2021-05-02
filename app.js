@@ -11,6 +11,7 @@ const ranking = require('./routes/ranking')
 const exchange = require('./routes/exchange')
 const profile = require('./routes/profile')
 const corps = require('./routes/corps')
+const user = require('./routes/user')
 // server
 const app = express()
 // 数据库连接
@@ -24,5 +25,6 @@ app.use('/ranking', ranking)
 app.use('/exchange', exchange)
 app.use('/profile', profile)
 app.use('/corps', corps)
+app.use('/user', user)
 
 app.listen(8080, () => console.log('server is running at port 8080'))
