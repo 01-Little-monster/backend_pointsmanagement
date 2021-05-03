@@ -21,15 +21,15 @@ mongo(app)
 // 处理req.body
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-// 处理文件上传
+// 处理文件上传 multer
 
 app.use(cors()) // 跨域
 // 路由挂载
 app.use('/home', home)
-app.use('/ranking', ranking)
-app.use('/exchange', exchange)
+app.use('/ranking', ranking) // 排位
+app.use('/exchange', exchange)  // 交换
 app.use('/profile', profile)
-app.use('/corps', corps)
-app.use('/user', user)
+app.use('/corps', corps)  // 团队管理
+app.use('/user', user) 
 
 app.listen(8080, () => console.log('server is running at port 8080'))
