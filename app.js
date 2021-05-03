@@ -18,6 +18,11 @@ const app = express()
 mongo(app)
 
 // 中间件挂载
+// 处理req.body
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+// 处理文件上传
+
 app.use(cors()) // 跨域
 // 路由挂载
 app.use('/home', home)
