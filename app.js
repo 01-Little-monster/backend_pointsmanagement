@@ -30,6 +30,6 @@ app.use('/ranking', ranking) // 排位
 app.use('/exchange', exchange)  // 交换
 app.use('/profile', profile)
 app.use('/corps', corps)  // 团队管理
-app.use('/user', user) 
+app.use('/user', user)
 
 app.listen(8080, () => console.log('server is running at port 8080'))
