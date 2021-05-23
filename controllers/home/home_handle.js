@@ -1,8 +1,10 @@
 // home 的路由处理函数
 const index = (req, res) => {
-  res.send({
-    message: '首页'
-  })
+  // res.send({
+  //   message: '首页'
+  // })
+  // 测试代码
+  throw new Error('访问出错')
 }
 const activity = (req, res) => {
   res.send({
