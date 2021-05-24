@@ -8,6 +8,9 @@ const mongo = require('./model/config/db')
 // 错误处理文件
 const NotFound = require('./controllers/notFound/notFound_handle')
 const error = require('./controllers/error/error_handle')
+// express-jwt 验证 token
+const JWT = require('./middleware/config/token/key')
+
 // 路由文件
 const homeRouter = require('./routes/home')
 const rankingRouter = require('./routes/ranking')
@@ -27,6 +30,8 @@ app.use(express.json())
 // 处理文件上传 multer
 
 app.use(cors()) // 跨域
+// 验证 token
+app.use(JWT)
 // 路由挂载
 app.use('/home', homeRouter)
 app.use('/ranking', rankingRouter) // 排位
