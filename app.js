@@ -12,6 +12,7 @@ const error = require('./controllers/error/error_handle')
 const JWT = require('./middleware/config/token/key')
 
 // 路由文件
+const loginRouter = require('./routes/login')
 const homeRouter = require('./routes/home')
 const rankingRouter = require('./routes/ranking')
 const exchangeRouter = require('./routes/exchange')
@@ -33,6 +34,7 @@ app.use(cors()) // 跨域
 // 验证 token
 app.use(JWT)
 // 路由挂载
+app.use('/login', loginRouter)
 app.use('/home', homeRouter)
 app.use('/ranking', rankingRouter) // 排位
 app.use('/exchange', exchangeRouter)  // 交换

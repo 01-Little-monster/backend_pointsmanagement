@@ -4,5 +4,5 @@ module.exports = expressJWT({
   secret: 'xiaoxiaoguai',
   algorithms: ['HS256']
 }).unless({
-  path: [ '/profile/login' ]
+  path: [ '/login/index' ]
 })

@@ -5,7 +5,6 @@ const {
   admin,
   info,
   declare,
-  login
 } = require('../controllers/profile/profile_handle')
 
 router
@@ -13,7 +12,6 @@ router
   .get('/admin', admin)
   .get('/info', info)
   .get('/declare', declare)
-  .post('/login', login)
 
 module.exports = router
 
